@@ -1,0 +1,7 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+A ".git" hidden subdirectory is created, in which for Git to store the repository's history and metadata. Initialization is necessary for all the functionality of Git to operate; without it, there would be no "repository," only a folder and some files.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+In the Git context, the working directory is simply one folder that contains all the original source files of a project; but in particular, it is a specific folder (the "parent" folder of the project) and it itself contains one or more subfolders that, along with files it and said subfolders contain, collectively compose the repository. In other words, the repository comprises the working directory along with all its files and subfolders. The staging area (if it is even an "area" at all, and not merely an abstract concept we're naming—that hasn't been made clear to me yet) is merely a subsection of the above where Git queues up the files to be included in the next commit—wherever they may reside in the folder hierarchy.
