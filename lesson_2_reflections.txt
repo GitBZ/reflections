@@ -1,20 +1,85 @@
-What happens when you initialize a repository? Why do you need to do it?
+What happens when you initialize a repository? Why do you need to do
+it?
 
-    A ".git" hidden subdirectory is created, in which for Git to store the repository's history and metadata. Initialization is necessary for all the functionality of Git to operate; without it, there would be no "repository," only a folder and some files.
+    A ".git" hidden subdirectory is created, in which for Git to
+    store the repository's history and metadata. Initialization is
+    necessary for all the functionality of Git to operate; without
+    it, there would be no "repository," only a folder and some files.
 
-How is the staging area different from the working directory and the repository? What value do you think it offers?
+How is the staging area different from the working directory and the
+repository? What value do you think it offers?
 
-    A Git repository comprises the entirety of all project data (for the given project), including history and metadata. In the Git context, the working directory is the "sandbox" holding all the source files of a project that have been updated (incl. added or removed) locally but not otherwise updated in the repository (committed). The staging area (if it is even an "area" at all, and not merely an abstract concept we're naming—that hasn't been made clear to me yet) is merely a subsection of the working directory where Git queues up the files that are actually to be included in the next commit (wherever they may physically reside in the folder hierarchy).
+    A Git repository comprises the entirety of all project data (for
+    the given project), including history and metadata. In the Git
+    context, the working directory is the "sandbox" holding all the
+    source files of a project that have been updated (incl. added or
+    removed) locally but not otherwise updated in the repository
+    (committed). The staging area (if it is even an "area" at all,
+    and not merely an abstract concept we're naming—that hasn't been
+    made clear to me yet) is merely a subsection of the working
+    directory where Git queues up the files that are actually to be
+    included in the next commit (wherever they may physically reside
+    in the folder hierarchy).
 
-How can you use the staging area to make sure you have one commit per logical change?
+How can you use the staging area to make sure you have one commit per
+logical change?
 
-    Do git diffs (with and without the --staged switch) and git status to determine exactly what has been changed. Then be sure only to add updated files pertaining to the current logical change before committing—one logical change at a time (irrespective of how many files it comprises). Repeat if & as necessary until all updates to keep have been committed.
+    Do git diffs (with and without the --staged switch) and git
+    status to determine exactly what has been changed. Then be sure
+    only to add updated files pertaining to the current logical
+    change before committing—one logical change at a time
+    (irrespective of how many files it comprises). Repeat if & as
+    necessary until all updates to keep have been committed.
 
-What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+What are some situations when branches would be helpful in keeping
+your history organized? How would branches help?
 
-    As discussed in the training video, experimenting and creating an alternate feature set (e.g., "standard" vs. "premium") are two common good reasons for branching. Localization (also from the video) could be another purpose, but this is usually handled through more rigourous and elegant methods than by creating entirely separate code bases. I suppose another purpose that is probably more-or-less common is for each developer to have their own branch, in order to work on specific code subsets with a high measure of autonomy and a low potential for conflicts with other developers, on the basis that they'll be carefully merged back to a common branch when finished. Similarly, branching could be employed by designers so as not to run the risk of contaminating code with inadvertent errors while still aloowing the designer full, unfettered access to the entire project for their design work—again, to be merged deliberately back into the project when ready. The branches, as mentioned, provide a safety buffer against corrupting the master code base as many individuals work separately on several moving parts, as well as offer opportunities for multiple "flavors" of the project to take shape. They also can be useful for testing purposes, especially alpha, beta, regression, and integration testing.
+    As discussed in the training video, experimenting and creating an
+    alternate feature set (e.g., "standard" vs. "premium") are two
+    common good reasons for branching. Localization (also from the
+    video) could be another purpose, but this is usually handled
+    through more rigourous and elegant methods than by creating
+    entirely separate code bases. I suppose another purpose that is
+    probably more-or-less common is for each developer to have their
+    own branch, in order to work on specific code subsets with a high
+    measure of autonomy and a low potential for conflicts with other
+    developers, on the basis that they'll be carefully merged back to
+    a common branch when finished. Similarly, branching could be
+    employed by designers so as not to run the risk of contaminating
+    code with inadvertent errors while still aloowing the designer
+    full, unfettered access to the entire project for their design
+    work—again, to be merged deliberately back into the project when
+    ready. The branches, as mentioned, provide a safety buffer
+    against corrupting the master code base as many individuals work
+    separately on several moving parts, as well as offer
+    opportunities for multiple "flavors" of the project to take
+    shape. They also can be useful for testing purposes, especially
+    alpha, beta, regression, and integration testing.
 
 How do the diagrams help you visualize the branch structures?
 
-    Forgive me, but I think it's rather straightforward and obvious. Just as a family tree helps to visualize, well, a family tree, or a flowchart helps to visualize branching logic, this too gives visual representation to this particular kind of branching. I personally think the exercise is pretty elementary and redundant, actually, and did little (or nothing at all) to advance my understanding. A "branch"—of anything—is just that, a branch. We all know what that is and have been drawing it in its many forms (horticulture, sentence diagrams, cartography, logic—the list is endless) since primary school, so why do we need to draw it again to drive home this concept that isn't new in any way?
+    Forgive me, but I think it's rather straightforward and obvious.
+    Just as a family tree helps to visualize, well, a family tree, or
+    a flowchart helps to visualize branching logic, this too gives
+    visual representation to this particular kind of branching. I
+    personally think the exercise is pretty elementary and redundant,
+    actually, and did little (or nothing at all) to advance my
+    understanding. A "branch"—of anything—is just that, a branch. We
+    all know what that is and have been drawing it in its many forms
+    (horticulture, sentence diagrams, cartography, logic—the list is
+    endless) since primary school, so why do we need to draw it again
+    to drive home this concept that isn't new in any way?
     
+What is the result of merging two branches together? Why do we
+represent it in the diagram the way we do?
+
+    The currently checked-out branch will become the branch/label
+    into which both branches become merged. (This is true whether the
+    current branch’s label is included as an argument to the git
+    merge command or not; including it on the command line is purely
+    aesthetic and nonfunctional.) The newly merged branches converge
+    into the current branch, effectively terminating the branch that
+    was merged in. [I'm sorry but I don't understand the rest of the
+    question, about representing it in the diagram. It seems self-
+    evident to me how anyone would depict basically any merge in any
+    diagram. Am I missing some deeper meaning or hidden agenda here?]
