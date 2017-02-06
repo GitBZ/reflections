@@ -83,3 +83,15 @@ represent it in the diagram the way we do?
     question, about representing it in the diagram. It seems self-
     evident to me how anyone would depict basically any merge in any
     diagram. Am I missing some deeper meaning or hidden agenda here?]
+
+What are the pros and cons of Git's automatic merging vs. always doing merges manually?
+
+    Automatic merging spares the author the tedious and time-consuming
+    effort of finding and reconciling every difference between the latest files. It also reduces the likelihood of errors in doing
+    so, by eliminating human error. On the other hand, it can actually
+    introduce errors if the automatically merged output happens to
+    entail logic errors, for instance. There are potentially also rare
+    occasions where the merging algorithm gets it wrong and makes an
+    assumption about the differences that isn't valid—although given
+    the product's maturity and ubiquity, I imagine this is an
+    exceedingly rare occurrence, if it even happens at all anymore.
