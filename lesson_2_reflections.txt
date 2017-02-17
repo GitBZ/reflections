@@ -38,19 +38,24 @@ your history organized? How would branches help?
     alternate feature set (e.g., "standard" vs. "premium") are two
     common good reasons for branching. Localization (also from the
     video) could be another purpose, but this is usually handled
-    through more rigourous and elegant methods than by creating
-    entirely separate code bases. I suppose another purpose that is
-    probably more-or-less common is for each developer to have their
-    own branch, in order to work on specific code subsets with a high
-    measure of autonomy and a low potential for conflicts with other
-    developers, on the basis that they'll be carefully merged back to
-    a common branch when finished. Similarly, branching could be
-    employed by designers so as not to run the risk of contaminating
-    code with inadvertent errors while still aloowing the designer
-    full, unfettered access to the entire project for their design
-    work—again, to be merged deliberately back into the project when
-    ready. The branches, as mentioned, provide a safety buffer
-    against corrupting the master code base as many individuals work
+    through more rigorous and elegant methods than by creating
+    entirely separate code bases.
+    
+    I suppose another purpose that is probably more-or-less common is
+    for each developer to have their own branch, in order to work on
+    specific code subsets with a high measure of autonomy and a low
+    potential for conflicts with other developers, on the basis that
+    they'll be carefully merged back to a common branch when
+    finished.
+    
+    Similarly, branching could be employed by designers so as not to
+    run the risk of contaminating code with inadvertent errors while
+    still allowing the designer full, unfettered access to the entire
+    project for their design work—again, to be merged deliberately
+    back into the project when ready.
+    
+    The branches, as mentioned, provide a safety buffer against
+    corrupting the master code base as many individuals work
     separately on several moving parts, as well as offer
     opportunities for multiple "flavors" of the project to take
     shape. They also can be useful for testing purposes, especially
@@ -84,10 +89,12 @@ represent it in the diagram the way we do?
     evident to me how anyone would depict basically any merge in any
     diagram. Am I missing some deeper meaning or hidden agenda here?]
 
-What are the pros and cons of Git's automatic merging vs. always doing merges manually?
+What are the pros and cons of Git's automatic merging vs. always doing
+merges manually?
 
     Automatic merging spares the author the tedious and time-consuming
-    effort of finding and reconciling every difference between the latest files. It also reduces the likelihood of errors in doing
+    effort of finding and reconciling every difference between the
+    latest files. It also reduces the likelihood of errors in doing
     so, by eliminating human error. On the other hand, it can actually
     introduce errors if the automatically merged output happens to
     entail logic errors, for instance. There are potentially also rare
