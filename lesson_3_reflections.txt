@@ -14,17 +14,45 @@ all your work local?
 Why might you want to always pull changes manually rather than having
 Git automatically stay up-to-date with your remote repository?
 
-    _Fill_in_your_answer_here_
+    • in case I'm working on a different branch locally than my current
+      remote branch
+    • because I may not need my local repository to stay as current as
+      my remote one; I may do the bulk of my work only in the remote
+      repo.
+    • to be able, for whatever reason, to select only the branch(es) I
+      want saved locally rather than have the apps (Git and/or GitHub)
+      just keep the totality of both in sync
 
 Describe the differences between forks, clones, and branches. When
 would you use one instead of another?
 
-    _Fill_in_your_answer_here_
+    A clone is a copy of an existing repository in another place (such
+    as from GitHub to a local computer). It allows for all the advan-
+    tages listed in the first Q&A above, among others.
+    
+    A branch is a way to diverge off a project's "main" (or, "master")
+    code base so that others can work on different parts, or so the 
+    principal can try different things (along with a multitude of other
+    reasons).
+    
+    A [GitHub] fork is rather analogous to both a [Git] clone and a
+    [Git] branch. A fork is essentially a clone wherein the source
+    and destination repositories are both remote, on GitHub. It's also
+    essentially a branch of its own, albeit more independent from the
+    original source (and saved in a separate user account).
+    
+    I've already discussed at length in prior reflections as to what
+    clones and branches are used for and when. A fork is in order when
+    one wants to have their own independent copy of a project to work
+    on without affecting the source, especially when one does not have
+    write rights to someone else's repository anyway.
 
 What is the benefit of having a copy of the last known state of the
 remote stored locally?
 
-    _Fill_in_your_answer_here_
+    So that one can work on the latest version if desired, even if one
+    doesn't have access to the remote (such as when traveling and with-
+    out Internet access).
 
 How would you collaborate without using Git or GitHub? What would be
 easier, and what would be harder?
