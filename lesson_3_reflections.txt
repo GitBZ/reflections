@@ -57,9 +57,26 @@ remote stored locally?
 How would you collaborate without using Git or GitHub? What would be
 easier, and what would be harder?
 
-    _Fill_in_your_answer_here_
+    What would be easier certainly would be not having to understand
+    and remember exactly how these two applications work! Using GitHub without using Git too would make version control difficult
+    or nonexistent (at least, not without jumping through a lot of
+    hoops along the way manually to approximate the version control—
+    beginning with the revision history as but one key feature). As for
+    GitHub itself, one would lose the social-media features, such as
+    notifications (incl. "following") and commenting; one would have to
+    send emails manually in order to solicit input. GitHub also
+    provides storage and backup infrastructure as a feature, whereas
+    without it one would have to provide and manage both otherwise.
+    Git & GitHub also provide automatic merging capabilities for code
+    revisions, obviating the need (in many cases) for manual reconcili-
+    ation of divergent code bases/branches. I'm sure I'm missing
+    numerous other advantages Git & GitHub bring to the table, but
+    it doesn't seem necessary or useful for me to try to be exhaustive
+    here rather than merely representative.
 
 When would you want to make changes in a separate branch rather than
 directly in master? What benefits does each approach have?
 
-    _Fill_in_your_answer_here_
+    I've already discussed this question in various ways in these
+    reflections before. It would be redundant for me to recapitulate
+    it again.
